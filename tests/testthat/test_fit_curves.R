@@ -1,0 +1,16 @@
+test_that("fit_curves works for different combination of inputs", {
+
+   perf_functions <-
+     fit_curves(models = list(tpc_size = mgcv::gamm(performance ~ s(temp, bs = 'cs') + size,
+                                                    random = list(id = ~ 1),
+                                                    data = FulanusPhysiology),
+                              tpc_no_size = mgcv::gamm(performance ~ s(temp, bs = 'cs'),
+                                                       random = list(id = ~ 1),
+                                                       data = FulanusPhysiology)))
+
+  expect_is(perf_functions$tpc_size, "list")
+  expect_is(perf_functions$tpc_size$output[[1]], "lme")
+  expect_is(perf_functions$tpc_size$output[[2]], "gam")
+  expect_is(perf_functions$tpc_size$predict, "function")
+
+})

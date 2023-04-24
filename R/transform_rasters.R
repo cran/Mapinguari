@@ -12,14 +12,27 @@
 #' @return Returns a RasterStack with layers for the predictions required.
 #'
 #' @examples
+#' \dontrun{
+#' FulanusEcoRasters_present <-
+#'   get_rasters(
+#'     var = c('prec', 'tmax', 'tmin'),
+#'     scenarios = 'present',
+#'     source = "C:/Users/gabri/Dropbox/Mapinguari/global_grids_10_minutes",
+#'     ext = FulanusDistribution[c(2,3)],
+#'     margin = 5,
+#'     reorder = c(1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9))
+#'
 #' # You can apply any function to subsets of rasters in the stack,
 #' # by selecting the layers with double brackets.
 #'
-#' transform_rasters(raster_stack = df_tmax,
+#' transform_rasters(raster_stack = FulanusEcoRasters_present$present,
 #'     total_1sem = sum(tmax[1:6]),
 #'     mean_1sem = mean(tmax[1:6]),
-#'     sd_1sem = sd(tmax[1:6]))
-#'
+#'     sd_1sem = sd(tmax[1:6]),
+#'     total_2sem = sum(tmax[7:12]),
+#'     mean_2sem = mean(tmax[7:12]),
+#'     sd_2sem = sd(tmax[7:12]))
+#'}
 #' @export
 
 transform_rasters <-

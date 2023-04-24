@@ -13,11 +13,17 @@
 #' @return Data frame with remaining longitudes and latitudes.
 #'
 #' @examples
+#'\dontrun{
+#' #First, we need to obtain an altitude raster to filter by altitude.
+#' library(raster)
+#' alt <- raster::getData("alt", country = "BRA", mask = TRUE)
+#'
+#' # Then, we clean the points
 #'  TtorquatusDistribution_clean <-
 #'   clean_points(coord = TtorquatusDistribution,
 #'                merge_dist = 20000,
-#'                filter_layer = !is.na(df_alt))
-#'
+#'                filter_layer = !is.na(alt))
+#'}
 #' @export
 
 clean_points <- function(coord,

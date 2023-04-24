@@ -15,16 +15,17 @@
 #' @return Returns a list of raster stacks for the variables required, organized by year/scenario combination.
 #'
 #' @examples
+#' \dontrun{
 #' # replace rasterpath with the directory on your computer containing worldclim data
 #'
-#' Ttorquatus_Ecorasters_present <-
+#' Fulanus_Ecorasters_present <-
 #'   get_rasters(
 #'     var = c('prec', 'tmin', 'tmax'),
 #'     scenario = 'present',
-#'     raster_path = system.file("extdata/wc-10m", package="Mapinguari"),
-#'     ext = TtorquatusDistribution[2:3],
+#'     raster_path = "C:/Users/gabri/Dropbox/Mapinguari/global_grids_10_minutes",
+#'     ext = FulanusDistribution[c(2,3)],
 #'     margin = 5)
-#'
+#' }
 #' @export
 
 # rename load_rasters?

@@ -4,9 +4,15 @@
 \alias{get_rasters}
 \title{Retrieve and organize spatial rasters.}
 \usage{
-get_rasters(var = NULL, scenario = NULL, raster_path = NULL,
-  ext = c(-180, 180, -60, 90), coord_col = c("Lon", "Lat"),
-  margin = 0, separator = "_")
+get_rasters(
+  var = NULL,
+  scenario = NULL,
+  raster_path = NULL,
+  ext = c(-180, 180, -60, 90),
+  coord_col = c("Lon", "Lat"),
+  margin = 0,
+  separator = "_"
+)
 }
 \arguments{
 \item{var}{character. Names of variables to be loaded.}
@@ -30,14 +36,15 @@ Returns a list of raster stacks for the variables required, organized by year/sc
 \code{get_rasters} Loads rasters from directory and returns them in an organized list of specified scenarios.
 }
 \examples{
+\dontrun{
 # replace rasterpath with the directory on your computer containing worldclim data
 
-Ttorquatus_Ecorasters_present <-
+Fulanus_Ecorasters_present <-
   get_rasters(
     var = c('prec', 'tmin', 'tmax'),
     scenario = 'present',
-    raster_path = system.file("extdata/wc-10m", package="Mapinguari"),
-    ext = TtorquatusDistribution[2:3],
+    raster_path = "C:/Users/gabri/Dropbox/Mapinguari/global_grids_10_minutes",
+    ext = FulanusDistribution[c(2,3)],
     margin = 5)
-
+}
 }

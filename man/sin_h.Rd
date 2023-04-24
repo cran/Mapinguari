@@ -19,12 +19,9 @@ sin_h(tmax, tmin, thrs, res)
 numeric. Amount of time in hours above temperature threshold in simulated daily temperature variation.
 }
 \description{
-\code{sin_h} Simulates daily variation in temperature and counts amount of time above a temperature threshold, as seen in Sinervo et al (2010).
+\code{sin_h} Simulates daily variation in temperature and counts amount of time above a temperature threshold, as seen in Sinervo et al. 2010.
 }
 \examples{
 sin_h(28, 10, 23, 3)
 
-}
-\references{
-Sinervo et al (2010) <doi:10.1126/science.1184695>.
 }

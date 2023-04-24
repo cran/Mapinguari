@@ -4,8 +4,14 @@
 \alias{multi_extract}
 \title{Gets values from multiple rasters.}
 \usage{
-multi_extract(raster_path, coord, folders = NULL, files = NULL,
-  layers = NULL, ncores = 1)
+multi_extract(
+  raster_path,
+  coord,
+  folders = NULL,
+  files = NULL,
+  layers = NULL,
+  ncores = 1
+)
 }
 \arguments{
 \item{raster_path}{character. Path to the folder with raster folders.}
@@ -27,13 +33,14 @@ Data frame with extracted values from multiple rasters
 \code{multi_extract} Extract values of multiple spatial rasters for a set of geographical coordinates.
 }
 \examples{
-\donttest{
+
+\dontrun{
 # replace rasterpath with the directory on your computer containing worldclim data
 
 temp_pres <-
- multi_extract(raster_path = system.file("extdata/wc-10m", package="Mapinguari"),
+  multi_extract(raster_path = "mydir/rasters/worldclim/global_rasters_10min/",
                 coord = TtorquatusDistribution[-1],
                 folders = c("tmax_present", "tmin_present"))
-}
+                }
 
 }

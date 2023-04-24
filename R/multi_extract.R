@@ -12,14 +12,15 @@
 #' @return Data frame with extracted values from multiple rasters
 #'
 #' @examples
-#' \donttest{
+#'
+#' \dontrun{
 #' # replace rasterpath with the directory on your computer containing worldclim data
 #'
 #' temp_pres <-
-#'  multi_extract(raster_path = system.file("extdata/wc-10m", package="Mapinguari"),
+#'   multi_extract(raster_path = "mydir/rasters/worldclim/global_rasters_10min/",
 #'                 coord = TtorquatusDistribution[-1],
 #'                 folders = c("tmax_present", "tmin_present"))
-#'}
+#'                 }
 #'
 #' @export
 

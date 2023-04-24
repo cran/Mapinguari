@@ -4,8 +4,13 @@
 \alias{clean_points}
 \title{Clean occurrence records}
 \usage{
-clean_points(coord, merge_dist, coord_col = c("Lon", "Lat"),
-  filter_layer = NULL, na.rm = FALSE)
+clean_points(
+  coord,
+  merge_dist,
+  coord_col = c("Lon", "Lat"),
+  filter_layer = NULL,
+  na.rm = FALSE
+)
 }
 \arguments{
 \item{coord}{data.frame. Data frame containing longitudes (Lon) and latitudes (Lat) of occurrence records of a species.}
@@ -25,9 +30,15 @@ Data frame with remaining longitudes and latitudes.
 \code{clean_points} Eliminates species occurrence records that are too close to each other or at undesired locations.
 }
 \examples{
+\dontrun{
+#First, we need to obtain an altitude raster to filter by altitude.
+library(raster)
+alt <- raster::getData("alt", country = "BRA", mask = TRUE)
+
+# Then, we clean the points
  TtorquatusDistribution_clean <-
   clean_points(coord = TtorquatusDistribution,
                merge_dist = 20000,
-               filter_layer = !is.na(df_alt))
-
+               filter_layer = !is.na(alt))
+}
 }

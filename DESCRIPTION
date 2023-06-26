@@ -1,7 +1,7 @@
 Package: Mapinguari
 Type: Package
 Title: Process-Based Biogeographical Analysis
-Version: 2.0.0
+Version: 2.0.1
 Authors@R: c(person("Gabriel", "Caetano", email = "gabrielhoc@gmail.com", role = c("aut", "cre")),
              person("Juan", "Santos", email = "infraguttatus@gmail.com", role = c("aut")),
              person("Barry", "Sinervo", email = "lizardrps@gmail.com", role = c("aut")))
@@ -13,14 +13,13 @@ LazyData: true
 URL: https://github.com/gabrielhoc/Mapinguari
 BugReports: https://github.com/gabrielhoc/Mapinguari/issues
 Suggests: geosphere, mgcv
-Imports: dplyr, magrittr, parallel, raster, rgdal, rlang, stringr,
-        testthat
+Imports: dplyr, magrittr, parallel, raster, rlang, stringr, testthat
 RoxygenNote: 7.2.1
 NeedsCompilation: no
-Packaged: 2023-04-24 10:02:22 UTC; gabri
+Packaged: 2023-06-26 10:52:56 UTC; gabri
 Author: Gabriel Caetano [aut, cre],
   Juan Santos [aut],
   Barry Sinervo [aut]
 Maintainer: Gabriel Caetano <gabrielhoc@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-04-24 12:50:06 UTC
+Date/Publication: 2023-06-26 11:10:05 UTC
